@@ -2,13 +2,22 @@ namespace SittirChar
 {
     public class Model
     {
-        [Clean()]
+        [Clean]
         public int Id { get; set; }
-        public string Name { get; set; }
-        public double Double { get; set; }
-        public float Float { get; set; }
-        public char Char { get; set; }
-        public object Obj { get; set; }
 
+        [Clean]
+        public string Name { get; set; }
+
+        [Clean]
+        public double Double { get; set; }
+
+        [Clean]
+        public float Float { get; set; }
+
+        [Clean]
+        public char Char { get; set; }
+
+        [Clean]
+        public object Obj { get; set; }
     }
 }

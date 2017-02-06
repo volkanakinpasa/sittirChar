@@ -2,6 +2,6 @@
 {
     public interface IClean
     {
-        string Clean(string model);
+        string Clean(string model, char[] exclude);
     }
 }
