@@ -1,4 +1,6 @@
-﻿namespace SittirChar.Console
+﻿using SittirChar.Cons;
+
+namespace SittirChar.Console
 {
     class Program
     {

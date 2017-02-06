@@ -6,6 +6,21 @@ namespace SittirChar
 {
     public class TextCleanerHandler<T> where T : class
     {
+        private readonly char[] _exclude;
+
+        public TextCleanerHandler()
+        {
+
+        }
+
+        public TextCleanerHandler( char[] exclude)
+        {
+
+            exclude.NullCheck(string.Format("{0} parameter cannot be null.", "exclude"));
+
+            _exclude = exclude;
+        }
+
         public void Clean(T model)
         {
             var props = typeof (T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
@@ -21,10 +36,9 @@ namespace SittirChar
 
                     var value = prop.GetValue(model, null);
 
-                    if (value != null && value is string)
+                    if (value is string)
                     {
-
-                        var result = attributeInterface.Clean(value.ToString());
+                        var result = attributeInterface.Clean(value.ToString(), _exclude);
                         prop.SetValue(model, result);
 
                     }

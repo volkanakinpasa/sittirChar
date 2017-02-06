@@ -7,24 +7,24 @@ namespace SittirChar
     [AttributeUsage(AttributeTargets.Property)]
     public class CleanAttribute : BaseCleanCharAttribute, IClean
     {
-        private readonly char[] _unIgnored ;
-
-        public CleanAttribute()
-        {
-            _unIgnored = new[] { '\r', '\n' };
-        }
-        public virtual string Clean(string model)
+        public virtual string Clean(string model, char[] exclude)
         {
             var newString = new StringBuilder();
 
-            foreach (char c in model)
+            foreach (var c in model)
             {
-                if (_unIgnored.Contains(c) || !char.IsControl(c))
+                if (exclude.Contains(c))
+                {
+                    continue;
+                }
+
+                if (!char.IsControl(c))
+                {
                     newString.Append(c);
+                }
             }
 
             return newString.ToString();
         }
-
     }
 }

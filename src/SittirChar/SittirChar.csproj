@@ -41,8 +41,8 @@
   <ItemGroup>
     <Compile Include="BaseCleanCharAttribute.cs" />
     <Compile Include="CleanAttribute.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="IClean.cs" />
-    <Compile Include="Main.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextCleanerHandler.cs" />
