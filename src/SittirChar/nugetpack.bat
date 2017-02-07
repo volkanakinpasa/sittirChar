@@ -1,0 +1,1 @@
+nuget.exe pack SittirChar.csproj -properties Configuration=Release

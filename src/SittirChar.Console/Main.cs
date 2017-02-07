@@ -6,26 +6,13 @@ namespace SittirChar.Cons
     {
         public Start()
         {
-            System.Console.OutputEncoding = System.Text.Encoding.Unicode;
+            var model = new Model() {Name = @"ÈÈÈÈÈÈÈÈÈÈÈÇ¾å%&''''''''''''''''''"};
 
-            while (true)
-            {
-                System.Console.WriteLine("Enter a name");
-                var input = System.Console.ReadLine();
+            var cleanerHandler = new TextCleanerHandler<Model>(new []{ 'È', '\''});
 
-                if (input != null && input.Equals("exit", StringComparison.OrdinalIgnoreCase))
-                {
-                    break;
-                }
+            cleanerHandler.Clean(model);
 
-                var model = new Model() {Name = input};
-
-                var cleanerHandler = new TextCleanerHandler<Model>(new []{'Ş','ş'});
-
-                cleanerHandler.Clean(model);
-
-                System.Console.WriteLine(model.Name);
-            }
+            System.Console.ReadLine();
         }
     }
 }

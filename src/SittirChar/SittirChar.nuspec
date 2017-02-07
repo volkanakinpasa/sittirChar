@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>SittirChar</id>
+    <version>1.0.0</version>
+    <title>SittirChar</title>
+    <authors>Volkan AKIN</authors>
+    <owners>Volkan AKIN</owners>
+    <projectUrl>https://github.com/volkanakinpasa/SittirChar</projectUrl>
+	<requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Cleans the strings which don't have an unicode char</description>
+    <releaseNotes></releaseNotes>
+    <copyright></copyright>
+    <tags>clean, unicode, char</tags>
+  </metadata>
+</package>

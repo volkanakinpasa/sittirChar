@@ -17,7 +17,7 @@ namespace SittirChar
                 {
                     continue;
                 }
-
+                
                 if (!char.IsControl(c))
                 {
                     newString.Append(c);
